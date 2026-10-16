@@ -634,7 +634,7 @@ bool Estimator::initialStructure()
     //check imu observibility
     {
         map<double, ImageFrame>::iterator frame_it;
-        Vector3d sum_g;
+        Vector3d sum_g = Vector3d::Zero();
         for (frame_it = all_image_frame.begin(), frame_it++; frame_it != all_image_frame.end(); frame_it++)
         {
             double dt = frame_it->second.pre_integration->sum_dt;
